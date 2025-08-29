@@ -300,6 +300,7 @@ body {
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--primary-white);
+    margin-top: 2rem;
     margin-bottom: 3rem;
     font-weight: 400;
     line-height: 1.6;
@@ -1386,6 +1387,10 @@ section {
     
     .hero-content {
         padding: 0 1rem;
+    }
+    
+    .hero-subtitle {
+        margin-top: 2.5rem;
     }
     
     /* Mobile menu improvements for very small screens */
