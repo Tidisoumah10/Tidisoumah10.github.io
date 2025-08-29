@@ -1277,8 +1277,7 @@ section {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(20px);
+        background: #000000;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
@@ -1311,23 +1310,33 @@ section {
         color: var(--primary-white);
         font-size: 1.2rem;
         font-weight: 600;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        padding: 1rem 2rem;
-        border-radius: 8px;
+        padding: 0.5rem 0;
         transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .nav-menu .nav-link:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        position: relative;
+        background: none;
+        border: none;
+        border-radius: 0;
     }
     
     .nav-menu .nav-link::after {
-        display: none;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary-white);
+        transition: width 0.3s ease;
+    }
+    
+    .nav-menu .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .nav-menu .nav-link:hover {
+        transform: none;
+        box-shadow: none;
+        background: none;
     }
     
     .hero-cta {
@@ -1388,7 +1397,7 @@ section {
     
     .nav-menu .nav-link {
         font-size: 1.1rem;
-        padding: 0.8rem 1.5rem;
+        padding: 0.4rem 0;
     }
     
     /* Improve mobile navigation toggle */
@@ -1416,7 +1425,7 @@ section {
     
     .nav-menu .nav-link {
         font-size: 1rem;
-        padding: 0.6rem 1.2rem;
+        padding: 0.3rem 0;
     }
     
     .title-line {
