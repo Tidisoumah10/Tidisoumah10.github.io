@@ -1241,11 +1241,34 @@ section {
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+    
+    /* Tablet navigation improvements */
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    .nav-menu .nav-link {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.8rem;
+    }
 }
 
 @media (max-width: 768px) {
     :root {
         --section-padding: 80px 0;
+    }
+    
+    /* Mobile navbar improvements */
+    .navbar {
+        padding: 0.8rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-logo .logo-text {
+        font-size: 1.5rem;
     }
     
     .nav-menu {
@@ -1254,7 +1277,7 @@ section {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: center;
@@ -1262,6 +1285,7 @@ section {
         padding-top: 3rem;
         transition: left 0.3s ease;
         gap: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .nav-menu.active {
@@ -1270,6 +1294,40 @@ section {
     
     .nav-toggle {
         display: flex;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-toggle:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+    
+    /* Mobile menu links styling */
+    .nav-menu .nav-link {
+        color: var(--primary-white);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-menu .nav-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-menu .nav-link::after {
+        display: none;
     }
     
     .hero-cta {
@@ -1319,6 +1377,54 @@ section {
     
     .hero-content {
         padding: 0 1rem;
+    }
+    
+    /* Mobile menu improvements for very small screens */
+    .nav-menu {
+        top: 70px;
+        padding-top: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .nav-menu .nav-link {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    /* Improve mobile navigation toggle */
+    .nav-toggle {
+        margin-right: 1rem;
+    }
+    
+    .nav-toggle span {
+        width: 22px;
+        height: 2px;
+    }
+}
+
+/* Extra small devices (landscape phones, 320px and down) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .nav-menu {
+        top: 65px;
+        padding-top: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .nav-menu .nav-link {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .title-line {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
     }
 }
 
