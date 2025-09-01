@@ -151,7 +151,7 @@ body {
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: var(--primary-black);
-    font-family: var(--font-primary);
+    font-family: "Geist Mono", "Geist Mono Fallback", monospace;
     margin-bottom: 1.5rem;
 }
 
@@ -161,7 +161,7 @@ body {
     margin-bottom: 3rem;
     font-weight: 400;
     line-height: 1.6;
-    font-family: var(--font-primary);
+    font-family: "Geist Mono", "Geist Mono Fallback", monospace;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -182,7 +182,7 @@ body {
     border-radius: 50px;
     transition: var(--transition);
     font-size: 1rem;
-    font-family: var(--font-primary);
+    font-family: "Geist Mono", "Geist Mono Fallback", monospace;
     border: 2px solid transparent;
 }
 
