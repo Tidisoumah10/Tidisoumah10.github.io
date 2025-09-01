@@ -11,9 +11,9 @@
     --background-secondary: #111111;
     --foreground: #ffffff;
     --foreground-secondary: #e0e0e0;
-    --accent-blue: #0066ff;
-    --accent-blue-light: #3399ff;
-    --accent-cyan: #00d4ff;
+    --accent-blue: #ffffff;
+    --accent-blue-light: #f0f0f0;
+    --accent-cyan: #ffffff;
     --border: #1a1a1a;
     --border-light: #2a2a2a;
     
@@ -25,7 +25,7 @@
     
     /* Spacing */
     --section-padding: 120px 0;
-    --container-max: 1400px;
+    --container-max: 900px;
     --border-radius: 12px;
     --border-radius-large: 24px;
     
@@ -264,7 +264,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -285,8 +285,8 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 102, 255, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.3;
     animation: grid-float 20s ease-in-out infinite;
@@ -460,7 +460,7 @@ body {
 
 .cta-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
 }
 
 .cta-primary, .cta-secondary {
@@ -479,24 +479,25 @@ body {
 }
 
 .cta-primary {
-    background: var(--accent-blue);
-    color: var(--foreground);
+    background: #000000;
+    color: #ffffff;
 }
 
 .cta-primary:hover {
-    background: var(--accent-blue-light);
+    background: #ffffff;
+    color: #000000;
     transform: scale(1.05);
 }
 
 .cta-secondary {
-    background: transparent;
-    color: var(--foreground);
-    border: 2px solid var(--foreground);
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .cta-secondary:hover {
-    background: var(--foreground);
-    color: var(--background);
+    background: #ffffff;
+    color: #000000;
 }
 
 /* ===== SECTION STYLES ===== */
@@ -685,7 +686,7 @@ section {
     background: transparent;
     color: var(--accent-blue);
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
 }
 
 /* ===== SERVICES SECTION ===== */
@@ -730,7 +731,7 @@ section {
 .service-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent-blue);
-    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
 }
 
 .service-icon {
@@ -784,13 +785,13 @@ section {
 }
 
 .feature {
-    background: rgba(0, 102, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--accent-blue);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 102, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all var(--transition-fast);
@@ -825,7 +826,7 @@ section {
 .portfolio-item:hover {
     transform: translateY(-15px);
     border-color: var(--accent-blue);
-    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 25px 50px rgba(255, 255, 255, 0.2);
 }
 
 .portfolio-image {
@@ -851,7 +852,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 102, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -952,13 +953,13 @@ section {
 }
 
 .project-category {
-    background: rgba(0, 102, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--accent-blue);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 102, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -1010,7 +1011,7 @@ section {
 .testimonial-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent-blue);
-    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
 }
 
 .testimonial-content {
@@ -1092,7 +1093,7 @@ section {
 .contact-item:hover {
     transform: translateY(-5px);
     border-color: var(--accent-blue);
-    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
 }
 
 .contact-icon {
@@ -1210,7 +1211,7 @@ section {
     background: transparent;
     color: var(--accent-blue);
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
 }
 
 /* ===== FOOTER ===== */
@@ -1388,7 +1389,7 @@ section {
     visibility: hidden;
     transition: all var(--transition-smooth);
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
 .back-to-top.show {
@@ -1399,7 +1400,7 @@ section {
 .back-to-top:hover {
     background: var(--accent-blue-light);
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
