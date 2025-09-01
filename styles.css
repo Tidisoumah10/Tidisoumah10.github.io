@@ -47,7 +47,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: #1A1A1A;
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-gray);
     z-index: 1000;
@@ -67,8 +67,9 @@ body {
 .nav-logo .logo-text {
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--primary-black);
+    color: #F1F8E9;
     font-family: var(--font-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-menu {
@@ -79,12 +80,13 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-gray);
+    color: #F1F8E9;
     font-weight: 500;
     font-size: 0.95rem;
     font-family: var(--font-primary);
     transition: var(--transition);
     position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-link::after {
@@ -103,7 +105,8 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--accent-color);
+    color: #F1F8E9;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .nav-toggle {
@@ -116,7 +119,7 @@ body {
 .nav-toggle span {
     width: 25px;
     height: 2px;
-    background: var(--primary-black);
+    background: #F1F8E9;
     transition: var(--transition);
 }
 
