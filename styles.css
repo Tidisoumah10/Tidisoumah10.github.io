@@ -69,7 +69,7 @@ body {
     font-weight: 600;
     color: #F1F8E9;
     font-family: var(--font-primary);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.2);
 }
 
 .nav-menu {
@@ -86,7 +86,7 @@ body {
     font-family: var(--font-primary);
     transition: var(--transition);
     position: relative;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.2);
 }
 
 .nav-link::after {
@@ -106,7 +106,7 @@ body {
 
 .nav-link:hover {
     color: #F1F8E9;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.5);
 }
 
 .nav-toggle {
