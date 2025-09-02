@@ -1053,13 +1053,12 @@ body {
 .instagram-logo {
     width: 32px;
     height: 32px;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
+    fill: currentColor;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover .instagram-logo {
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+    fill: #0066ff;
     transform: scale(1.1);
 }
 
