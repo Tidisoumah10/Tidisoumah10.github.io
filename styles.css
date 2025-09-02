@@ -1533,10 +1533,28 @@ body {
 .text-3d {
     transform: perspective(1000px) rotateX(10deg) translateZ(20px);
     transition: all 0.3s ease;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.1),
+        0 2px 0 rgba(255, 255, 255, 0.05),
+        0 3px 0 rgba(255, 255, 255, 0.03),
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 0 8px rgba(255, 255, 255, 0.1);
+    filter: brightness(1.1) contrast(1.05);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2);
 }
 
 .text-3d:hover {
     transform: perspective(1000px) rotateX(5deg) translateZ(30px);
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.15),
+        0 2px 0 rgba(255, 255, 255, 0.08),
+        0 3px 0 rgba(255, 255, 255, 0.05),
+        0 1px 3px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.08),
+        0 0 12px rgba(255, 255, 255, 0.15);
+    filter: brightness(1.2) contrast(1.1);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
 }
 
 /* 3D Effects for Mobile */
@@ -1544,10 +1562,24 @@ body {
     .text-3d {
         transform: perspective(800px) rotateX(8deg) translateZ(15px);
         transition: all 0.3s ease;
+        text-shadow: 
+            0 1px 0 rgba(255, 255, 255, 0.08),
+            0 2px 0 rgba(255, 255, 255, 0.04),
+            0 1px 1px rgba(0, 0, 0, 0.08),
+            0 0 6px rgba(255, 255, 255, 0.08);
+        filter: brightness(1.05) contrast(1.02);
+        -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.15);
     }
     
     .text-3d:hover {
         transform: perspective(800px) rotateX(5deg) translateZ(25px);
+        text-shadow: 
+            0 1px 0 rgba(255, 255, 255, 0.12),
+            0 2px 0 rgba(255, 255, 255, 0.06),
+            0 1px 2px rgba(0, 0, 0, 0.12),
+            0 0 8px rgba(255, 255, 255, 0.12);
+        filter: brightness(1.1) contrast(1.05);
+        -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.2);
     }
 }
 
@@ -1555,10 +1587,22 @@ body {
     .text-3d {
         transform: perspective(600px) rotateX(6deg) translateZ(12px);
         transition: all 0.3s ease;
+        text-shadow: 
+            0 1px 0 rgba(255, 255, 255, 0.06),
+            0 1px 1px rgba(0, 0, 0, 0.06),
+            0 0 4px rgba(255, 255, 255, 0.06);
+        filter: brightness(1.03) contrast(1.01);
+        -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.1);
     }
     
     .text-3d:hover {
         transform: perspective(600px) rotateX(4deg) translateZ(20px);
+        text-shadow: 
+            0 1px 0 rgba(255, 255, 255, 0.08),
+            0 1px 1px rgba(0, 0, 0, 0.08),
+            0 0 6px rgba(255, 255, 255, 0.08);
+        filter: brightness(1.05) contrast(1.02);
+        -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.15);
     }
 }
 
