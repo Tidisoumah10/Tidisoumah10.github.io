@@ -1095,13 +1095,24 @@ body {
 .linkedin-logo {
     width: 32px;
     height: 32px;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
+    fill: currentColor;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover .linkedin-logo {
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+    fill: #0066ff;
+    transform: scale(1.1);
+}
+
+.github-logo {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover .github-logo {
+    fill: #0066ff;
     transform: scale(1.1);
 }
 
@@ -1313,6 +1324,11 @@ body {
         height: 28px;
     }
     
+    .github-logo {
+        width: 28px;
+        height: 28px;
+    }
+    
     /* Mobile Buttons */
     .cta-button, .project-visit-btn {
         padding: 0.8rem 2rem;
@@ -1457,6 +1473,11 @@ body {
     }
     
     .linkedin-logo {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .github-logo {
         width: 26px;
         height: 26px;
     }
