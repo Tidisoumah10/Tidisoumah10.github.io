@@ -1050,6 +1050,19 @@ body {
     box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3), 0 0 20px rgba(0, 102, 255, 0.2);
 }
 
+.instagram-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover .instagram-logo {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+    transform: scale(1.1);
+}
+
 .contact-item {
     padding: 2rem;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
@@ -1237,6 +1250,11 @@ body {
         font-size: 1.8rem;
     }
     
+    .instagram-logo {
+        width: 28px;
+        height: 28px;
+    }
+    
     /* Mobile Buttons */
     .cta-button, .project-visit-btn {
         padding: 0.8rem 2rem;
@@ -1364,6 +1382,11 @@ body {
         width: 55px;
         height: 55px;
         font-size: 1.6rem;
+    }
+    
+    .instagram-logo {
+        width: 26px;
+        height: 26px;
     }
     
     /* Extra Small Projects */
