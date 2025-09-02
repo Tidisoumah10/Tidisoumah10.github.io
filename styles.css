@@ -1092,6 +1092,19 @@ body {
     transform: scale(1.1);
 }
 
+.linkedin-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover .linkedin-logo {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+    transform: scale(1.1);
+}
+
 .contact-item {
     padding: 2rem;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
@@ -1295,6 +1308,11 @@ body {
         height: 28px;
     }
     
+    .linkedin-logo {
+        width: 28px;
+        height: 28px;
+    }
+    
     /* Mobile Buttons */
     .cta-button, .project-visit-btn {
         padding: 0.8rem 2rem;
@@ -1434,6 +1452,11 @@ body {
     }
     
     .instagram-logo {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .linkedin-logo {
         width: 26px;
         height: 26px;
     }
