@@ -1182,20 +1182,78 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 
-/* ===== TABLET ===== */
+/* ===== TABLET/iPAD ===== */
 @media (max-width: 1024px) {
-    .about-content {
-        gap: 3rem;
+    .section-container {
+        padding: 0 2rem;
     }
     
-    .profile-card {
-        padding: 1.8rem;
+    .hero {
+        padding: 120px 0 80px;
     }
     
-    .image-placeholder {
-        width: 110px;
-        height: 110px;
-        font-size: 2.2rem;
+    .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .mission-content {
+        max-width: 700px;
+    }
+    
+    .mission-text {
+        max-width: 500px;
+    }
+}
+
+/* ===== iPAD LANDSCAPE ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .social-icons {
+        gap: 2.5rem;
+    }
+    
+    .mission-content {
+        max-width: 600px;
     }
 }
 
@@ -1205,17 +1263,21 @@ body {
         font-size: 2.5rem !important;
         line-height: 1.2;
         margin-bottom: 1rem;
-    }
-    
+    text-align: center;
+}
+
     .hero-description {
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 2rem;
+        text-align: center;
+        max-width: 100%;
     }
     
     .section-title {
         font-size: 2rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
     
     .section-container {
@@ -1246,7 +1308,7 @@ body {
     
     .mission-profile {
         flex-direction: column;
-        gap: 1rem;
+    gap: 1rem;
         margin-bottom: 1.5rem;
     }
     
@@ -1276,6 +1338,12 @@ body {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .project-card {
+        margin: 0 auto;
+        max-width: 100%;
     }
     
     .project-image {
@@ -1290,9 +1358,20 @@ body {
         padding-bottom: 1.5rem;
     }
     
+    .tech-item {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
     /* Mobile Contact */
+    .contact-content {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
     .contact-section {
         margin-bottom: 2rem;
+        text-align: center;
     }
     
     .contact-section-title {
@@ -1300,12 +1379,21 @@ body {
         margin-bottom: 1rem;
     }
     
+    .email-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
     .email-link {
         font-size: 0.9rem;
+        text-align: center;
     }
     
     .social-icons {
         gap: 1.5rem;
+        justify-content: center;
     }
     
     .social-icon {
@@ -1393,15 +1481,19 @@ body {
     .hero-title {
         font-size: 2rem !important;
         line-height: 1.1;
+        text-align: center;
     }
     
     .hero-description {
         font-size: 0.9rem;
         line-height: 1.5;
+        text-align: center;
+        max-width: 100%;
     }
     
     .section-title {
         font-size: 1.8rem;
+        text-align: center;
     }
     
     /* Extra Small Spacing */
@@ -1659,6 +1751,48 @@ body {
 .visible {
     opacity: 1;
     visibility: visible;
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-container {
+        padding: 0 0.25rem;
+    }
+    
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+    
+    .instagram-logo,
+    .linkedin-logo,
+    .github-logo {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .tech-item {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+    
+    .mission-text {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Animazioni 3D per i progetti */
