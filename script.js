@@ -27,6 +27,14 @@ function initializeNavigation() {
         });
     });
 
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+
     // Navbar background on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
