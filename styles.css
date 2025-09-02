@@ -970,11 +970,45 @@ body {
     line-height: 1.8;
 }
 
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(2deg) translateZ(0);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 2rem;
+}
+
+.contact-icon:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-8px) translateZ(20px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #0066ff;
 }
 
 .contact-item {
@@ -1140,14 +1174,16 @@ body {
         padding-bottom: 1.5rem;
     }
     
-    /* Mobile Contact */
-    .contact-info {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    /* Mobile Contact Icons */
+    .contact-icons {
+        gap: 2rem;
+        margin-top: 2rem;
     }
     
-    .contact-item {
-        text-align: center;
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
     }
     
     /* Mobile Buttons */
@@ -1249,9 +1285,21 @@ body {
     }
     
     /* Extra Small Cards */
-    .competence-section, .process-item, .mission-text, .project-card, .contact-item {
+    .competence-section, .process-item, .mission-text, .project-card {
         padding: 1rem;
         margin-bottom: 1rem;
+    }
+    
+    /* Extra Small Contact Icons */
+    .contact-icons {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
     }
     
     /* Extra Small Projects */
