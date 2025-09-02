@@ -884,10 +884,87 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    /* Mobile Typography */
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-container {
+        padding: 0 1rem;
+    }
+    
+    /* Mobile Hero Section */
+    .hero {
+        padding: 2rem 0;
+        min-height: 80vh;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
+    /* Mobile Sections */
+    .philosophy, .process, .diversity, .projects, .contact {
+        padding: 3rem 0;
+    }
+    
+    /* Mobile Cards */
+    .competence-section, .process-item, .mission-text, .project-card, .contact-item {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    /* Mobile Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-image {
+        height: 250px;
+    }
+    
+    .project-tech-overlay {
+        padding-bottom: 5rem;
+    }
+    
+    .project-visit-overlay {
+        padding-bottom: 1.5rem;
+    }
+    
+    /* Mobile Contact */
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        text-align: center;
+    }
+    
+    /* Mobile Buttons */
+    .cta-button, .project-visit-btn {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
     .nav-menu {
         position: fixed;
         top: 0;
-        left: -100%;
+        right: -100%;
         width: 100%;
         height: 100vh;
         background: rgba(0, 0, 0, 0.98);
@@ -901,7 +978,7 @@ body {
     }
     
     .nav-menu.active {
-        left: 0;
+        right: 0;
     }
     
     .nav-toggle {
@@ -921,7 +998,7 @@ body {
     
     .nav-link:hover {
         background: rgba(255, 255, 255, 0.1);
-        transform: translateX(-5px);
+        transform: translateX(5px);
     }
     
     .nav-toggle.active span:nth-child(1) {
@@ -934,6 +1011,65 @@ body {
     
     .nav-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+/* ===== EXTRA SMALL MOBILE ===== */
+@media (max-width: 480px) {
+    /* Extra Small Typography */
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.1;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Extra Small Spacing */
+    .section-container {
+        padding: 0 0.5rem;
+    }
+    
+    .hero, .philosophy, .process, .diversity, .projects, .contact {
+        padding: 2rem 0;
+    }
+    
+    /* Extra Small Cards */
+    .competence-section, .process-item, .mission-text, .project-card, .contact-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Extra Small Projects */
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-tech-overlay {
+        padding-bottom: 4rem;
+    }
+    
+    .project-visit-overlay {
+        padding-bottom: 1rem;
+    }
+    
+    /* Extra Small Buttons */
+    .cta-button, .project-visit-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Extra Small Navbar */
+    .nav-link {
+        font-size: 1rem;
+        margin: 0.8rem 0;
+        padding: 0.4rem 0.8rem;
     }
     
     .hero {
