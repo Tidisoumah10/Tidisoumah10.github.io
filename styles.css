@@ -234,16 +234,28 @@ body {
 
 .competence-section {
     margin-bottom: 2.5rem;
-    padding: 1.5rem;
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition-smooth);
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(2deg) translateZ(0);
 }
 
 .competence-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg) translateY(-8px) translateZ(20px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .competence-title {
@@ -297,15 +309,27 @@ body {
 
 .process-item {
     padding: 2rem;
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition-smooth);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(2deg) translateZ(0);
 }
 
 .process-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg) translateY(-8px) translateZ(20px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .process-title {
@@ -338,15 +362,27 @@ body {
     line-height: 1.8;
     font-style: italic;
     padding: 2rem;
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition-smooth);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(2deg) translateZ(0);
 }
 
 .mission-text:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg) translateY(-8px) translateZ(20px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* ===== EXPLORING SECTION ===== */
@@ -479,16 +515,27 @@ body {
 }
 
 .project-card {
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
     overflow: hidden;
-    transition: var(--transition-smooth);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(2deg) translateZ(0);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg) translateY(-8px) translateZ(20px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .project-header {
@@ -903,16 +950,28 @@ body {
 }
 
 .contact-item {
-    padding: 1.5rem;
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition-smooth);
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(2deg) translateZ(0);
 }
 
 .contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg) translateY(-8px) translateZ(20px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .contact-label {
