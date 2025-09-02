@@ -28,7 +28,7 @@
     
     /* Spacing */
     --container-max-width: 1200px;
-    --section-padding: 60px 0;
+    --section-padding: 40px 0;
     --element-spacing: 2rem;
     
     /* Effects */
@@ -202,6 +202,7 @@ body {
     color: #ffffff;
     transform: translateY(-2px);
     border-color: #007bff;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4), 0 0 20px rgba(0, 123, 255, 0.3);
 }
 
 /* ===== SECTIONS ===== */
@@ -597,6 +598,7 @@ body {
     color: #000000;
     transform: translateY(-2px);
     border-color: #007bff;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4), 0 0 20px rgba(0, 123, 255, 0.3);
 }
 
 .project-tech-list {
@@ -919,7 +921,7 @@ body {
     
     /* Mobile Sections */
     .philosophy, .process, .diversity, .projects, .contact {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
     }
     
     /* Mobile Cards */
@@ -1037,7 +1039,7 @@ body {
     }
     
     .hero, .philosophy, .process, .diversity, .projects, .contact {
-        padding: 1.5rem 0;
+        padding: 1rem 0;
     }
     
     /* Extra Small Cards */
