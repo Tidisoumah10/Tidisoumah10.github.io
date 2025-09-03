@@ -549,9 +549,12 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card:nth-child(1) {
@@ -564,6 +567,10 @@ body {
 
 .project-card:nth-child(3) {
     animation-delay: 2s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 3s;
 }
 
 .project-card {
@@ -1209,8 +1216,9 @@ body {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        max-width: 1000px;
     }
     
     .contact-content {
