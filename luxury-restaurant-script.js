@@ -155,12 +155,24 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
-    // Hero image normal positioning (inside hero container)
+    // Hero image loading optimization
     const heroImage = document.querySelector('.hero-image img');
     if (heroImage) {
         // Image stays in normal flow within hero section
         heroImage.style.position = 'relative';
         heroImage.style.zIndex = '1';
+        
+        // Preload image to ensure it loads immediately
+        const img = new Image();
+        img.onload = function() {
+            heroImage.style.opacity = '1';
+        };
+        img.onerror = function() {
+            // If main image fails, try fallback
+            heroImage.src = 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=800&fit=crop';
+            heroImage.style.opacity = '1';
+        };
+        img.src = heroImage.src;
     }
 
     // Mobile menu toggle (if needed)
