@@ -450,88 +450,7 @@ body {
     color: #1d1d1f;
 }
 
-/* Contact Section - Apple Style */
-.contact {
-    padding: 100px 0;
-    background: #fff;
-}
 
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 22px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.contact-item i {
-    width: 40px;
-    height: 40px;
-    background: #0071e3;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.contact-item h3 {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 1.381;
-    letter-spacing: 0.011em;
-    color: #1d1d1f;
-    margin-bottom: 8px;
-}
-
-.contact-item p {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.47059;
-    letter-spacing: -0.022em;
-    color: #86868b;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #d2d2d7;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.47059;
-    letter-spacing: -0.022em;
-    color: #1d1d1f;
-    background: #fff;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #0071e3;
-}
 
 /* Footer - Apple Style */
 .footer {
@@ -703,10 +622,7 @@ body {
         gap: 20px;
     }
 
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -792,7 +708,5 @@ body {
         font-size: 24px;
     }
 
-    .contact-item h3 {
-        font-size: 17px;
-    }
+
 }
