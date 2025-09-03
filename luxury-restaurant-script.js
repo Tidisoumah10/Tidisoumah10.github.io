@@ -155,10 +155,20 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
-    // Hero image static (no parallax)
+    // Hero image static (no parallax or fixed positioning)
     const heroImage = document.querySelector('.hero-image img');
     if (heroImage) {
         heroImage.style.transform = 'none';
+        heroImage.style.position = 'static';
+        heroImage.style.zIndex = 'auto';
+        heroImage.style.top = 'auto';
+        heroImage.style.left = 'auto';
+        
+        // Ensure image stays static during scroll
+        window.addEventListener('scroll', function() {
+            heroImage.style.transform = 'none';
+            heroImage.style.position = 'static';
+        });
     }
 
     // Mobile menu toggle (if needed)
