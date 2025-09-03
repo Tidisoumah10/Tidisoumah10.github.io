@@ -155,16 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
-    // Hero image fixed positioning (stays visible during scroll)
+    // Hero image normal positioning (inside hero container)
     const heroImage = document.querySelector('.hero-image img');
     if (heroImage) {
-        // Image will stay fixed and visible during scroll
-        heroImage.style.position = 'fixed';
-        heroImage.style.top = '50%';
-        heroImage.style.right = '2rem';
-        heroImage.style.transform = 'translateY(-50%)';
+        // Image stays in normal flow within hero section
+        heroImage.style.position = 'relative';
         heroImage.style.zIndex = '1';
-        heroImage.style.maxWidth = '500px';
     }
 
     // Mobile menu toggle (if needed)
