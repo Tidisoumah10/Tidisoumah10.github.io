@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroButtons = document.querySelectorAll('.hero-actions button');
     heroButtons.forEach(button => {
         button.addEventListener('click', function() {
-            if (this.textContent === 'View Menu') {
-                document.querySelector('#menu').scrollIntoView({
+            if (this.textContent === 'View Suites') {
+                document.querySelector('#suites').scrollIntoView({
                     behavior: 'smooth'
                 });
-            } else if (this.textContent === 'Book Experience') {
+            } else if (this.textContent === 'Book Stay') {
                 document.querySelector('#reservations').scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reserve button functionality
     const reserveButtons = document.querySelectorAll('.reserve-btn, .btn-primary');
     reserveButtons.forEach(button => {
-        if (button.textContent.includes('Reserve') || button.textContent.includes('Reserve Table')) {
+        if (button.textContent.includes('Book') || button.textContent.includes('Reserve')) {
             button.addEventListener('click', function() {
                 document.querySelector('#reservations').scrollIntoView({
                     behavior: 'smooth'
@@ -65,9 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form data
             const formData = new FormData(this);
             const reservationData = {
-                date: formData.get('date'),
-                time: formData.get('time'),
+                checkin: formData.get('checkin'),
+                checkout: formData.get('checkout'),
                 guests: formData.get('guests'),
+                suite: formData.get('suite'),
                 name: formData.get('name'),
                 email: formData.get('email'),
                 phone: formData.get('phone')
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = true;
 
             setTimeout(() => {
-                alert('Reservation request submitted successfully! We will contact you shortly to confirm your booking.');
+                alert('Hotel reservation request submitted successfully! We will contact you shortly to confirm your booking.');
                 this.reset();
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
@@ -255,5 +256,5 @@ document.addEventListener('DOMContentLoaded', function() {
         img.style.transition = 'opacity 0.3s ease';
     });
 
-    console.log('Luxury Restaurant website loaded successfully!');
+    console.log('Luxury Hotel website loaded successfully!');
 });
