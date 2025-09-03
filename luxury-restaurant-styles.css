@@ -221,7 +221,8 @@ body {
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 /* ===== SECTIONS ===== */
