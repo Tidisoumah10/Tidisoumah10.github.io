@@ -155,10 +155,16 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
-    // Hero image static (no parallax)
+    // Hero image fixed positioning (stays visible during scroll)
     const heroImage = document.querySelector('.hero-image img');
     if (heroImage) {
-        heroImage.style.transform = 'none';
+        // Image will stay fixed and visible during scroll
+        heroImage.style.position = 'fixed';
+        heroImage.style.top = '50%';
+        heroImage.style.right = '2rem';
+        heroImage.style.transform = 'translateY(-50%)';
+        heroImage.style.zIndex = '1';
+        heroImage.style.maxWidth = '500px';
     }
 
     // Mobile menu toggle (if needed)
