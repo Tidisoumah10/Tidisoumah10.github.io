@@ -1950,47 +1950,20 @@ img {
     }
     
     .project-tech-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding-top: 0.5rem;
-        background: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
-    }
-    
-    .project-visit-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 40%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 0.5rem;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        padding: 1rem;
     }
     
     .project-tech-list {
         flex-wrap: wrap;
-        gap: 0.2rem;
-        justify-content: center;
-        max-width: 90%;
+        gap: 0.5rem;
     }
     
     .tech-item {
-        font-size: 0.65rem;
-        padding: 0.15rem 0.3rem;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
-        background: rgba(255, 255, 255, 0.9);
-        color: #000;
-        border-radius: 3px;
-        font-weight: 500;
+        max-width: 100%;
     }
     
     .process-grid,
@@ -2256,6 +2229,12 @@ img {
         padding: 0.3rem 0.6rem;
         margin: 0.1rem;
     }
+}
+
+/* Project Visit Button Container */
+.project-visit-btn-container {
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
 /* Animazioni 3D per i progetti */
