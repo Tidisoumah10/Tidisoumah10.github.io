@@ -175,65 +175,33 @@ document.addEventListener('DOMContentLoaded', function() {
         img.src = heroImage.src;
     }
 
-    // Mobile menu toggle (if needed)
-    const createMobileMenu = () => {
-        const navContainer = document.querySelector('.nav-container');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        // Create mobile menu button
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.className = 'mobile-menu-btn';
-        mobileMenuBtn.innerHTML = '☰';
-        mobileMenuBtn.style.display = 'none';
-        
-        // Add mobile menu styles
-        const style = document.createElement('style');
-        style.textContent = `
-            @media (max-width: 768px) {
-                .mobile-menu-btn {
-                    background: none;
-                    border: none;
-                    color: white;
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                    display: block !important;
-                }
-                
-                .nav-menu {
-                    position: fixed;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    background: rgba(0, 0, 0, 0.95);
-                    flex-direction: column;
-                    padding: 2rem;
-                    transform: translateY(-100%);
-                    transition: transform 0.3s ease;
-                }
-                
-                .nav-menu.active {
-                    transform: translateY(0);
-                }
-                
-                .nav-menu .nav-link {
-                    padding: 1rem 0;
-                    border-bottom: 1px solid #333;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Add button to nav
-        navContainer.appendChild(mobileMenuBtn);
-        
-        // Toggle mobile menu
-        mobileMenuBtn.addEventListener('click', () => {
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-    };
-
-    // Initialize mobile menu
-    createMobileMenu();
+        
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
 
     // Form validation
     const inputs = document.querySelectorAll('input, select');
