@@ -221,6 +221,8 @@ body {
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 /* ===== SECTIONS ===== */
@@ -477,10 +479,9 @@ body {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .contact-info {

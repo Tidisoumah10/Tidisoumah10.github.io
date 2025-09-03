@@ -157,14 +157,10 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
-    // Parallax effect for hero image
+    // Hero image static (no parallax)
     const heroImage = document.querySelector('.hero-image img');
     if (heroImage) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
-            heroImage.style.transform = `translateY(${parallax}px)`;
-        });
+        heroImage.style.transform = 'none';
     }
 
     // Mobile menu toggle (if needed)
