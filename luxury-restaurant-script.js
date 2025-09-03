@@ -68,10 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 checkin: formData.get('checkin'),
                 checkout: formData.get('checkout'),
                 guests: formData.get('guests'),
-                suite: formData.get('suite'),
                 name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone')
+                email: formData.get('email')
             };
 
             // Simulate form submission
