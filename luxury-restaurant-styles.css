@@ -636,7 +636,26 @@ body {
     }
     
     .nav-menu .nav-link:last-child {
-        border-bottom: none;
+        border-bottom: 1px solid #333;
+    }
+    
+    .nav-menu .reserve-btn {
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        background: var(--text-primary);
+        color: var(--primary-bg);
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: var(--font-weight-semibold);
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu .reserve-btn:hover {
+        background: var(--text-secondary);
+        transform: translateY(-2px);
     }
     
     .nav-actions {
