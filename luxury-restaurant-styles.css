@@ -511,57 +511,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== CONTACT SECTION ===== */
-.contact-section {
-    padding: var(--section-padding);
-    background: var(--secondary-bg);
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.contact-item h3 {
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.contact-item p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.contact-map {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.contact-map img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease;
-}
-
-.contact-map img:hover {
-    transform: scale(1.02);
-}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -637,7 +586,7 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 4rem 2rem 2rem;
     }
     
     .hero-image {
@@ -646,8 +595,7 @@ body {
     }
     
     .about-content,
-    .reservation-content,
-    .contact-content {
+    .reservation-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -698,7 +646,7 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 4rem 2rem 2rem;
     }
     
     .hero-image {
@@ -711,11 +659,14 @@ body {
     }
     
     .hero-title {
-        font-size: 3rem;
+        font-size: 3.2rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
     }
     
     .hero-subtitle {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
     }
     
     .section-title {
@@ -746,23 +697,42 @@ body {
         padding: 0 1rem;
     }
     
+    .hero {
+        padding: 4rem 1rem 2rem;
+        min-height: 100vh;
+    }
+    
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        text-align: center;
     }
     
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
     }
     
     .hero-actions {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
     
     .btn-primary,
     .btn-secondary {
         width: 100%;
         max-width: 300px;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
     }
     
     .section-title {
