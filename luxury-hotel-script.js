@@ -1,4 +1,4 @@
-// Luxury Restaurant JavaScript
+// Luxury Hotel JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
@@ -180,17 +180,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('nav-menu');
     
     if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             mobileMenuBtn.classList.toggle('active');
             navMenu.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
         
         // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('.nav-link');
+        const navLinks = navMenu.querySelectorAll('.nav-link, .reserve-btn');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenuBtn.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
         
@@ -199,6 +208,25 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
                 mobileMenuBtn.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     }
@@ -230,6 +258,64 @@ document.addEventListener('DOMContentLoaded', function() {
         
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
+    });
+
+    // Touch improvements for mobile
+    let touchStartY = 0;
+    let touchEndY = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+        touchStartY = e.changedTouches[0].screenY;
+    });
+    
+    document.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartY - touchEndY;
+        
+        // Swipe up to close mobile menu
+        if (Math.abs(diff) > swipeThreshold && navMenu && navMenu.classList.contains('active')) {
+            if (diff > 0) {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    }
+    
+    // Improve form usability on mobile
+    const formInputs = document.querySelectorAll('input, select, textarea');
+    formInputs.forEach(input => {
+        // Prevent zoom on focus for iOS
+        if (input.type === 'text' || input.type === 'email' || input.type === 'tel') {
+            input.addEventListener('focus', function() {
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                }
+            });
+        }
+    });
+    
+    // Add loading states for better UX
+    const buttons = document.querySelectorAll('button, .btn-primary, .btn-secondary');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (this.type === 'submit' || this.classList.contains('reserve-btn')) {
+                this.style.opacity = '0.7';
+                this.style.pointerEvents = 'none';
+                
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                    this.style.pointerEvents = 'auto';
+                }, 2000);
+            }
+        });
     });
 
     console.log('Luxury Hotel website loaded successfully!');
