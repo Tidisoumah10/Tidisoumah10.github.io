@@ -356,12 +356,13 @@ body {
 
 .feature-card {
     background: var(--white);
-    padding: 2.5rem 2rem;
+    padding: 0;
     border-radius: var(--border-radius-lg);
     text-align: center;
     box-shadow: var(--shadow-light);
     transition: var(--transition);
     border-top: 4px solid var(--hilton-blue);
+    overflow: hidden;
 }
 
 .feature-card:hover {
@@ -369,20 +370,42 @@ body {
     box-shadow: var(--shadow-medium);
 }
 
-.feature-icon {
+.feature-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.feature-card:hover .feature-image img {
+    transform: scale(1.05);
+}
+
+.feature-card .feature-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 53, 128, 0.9);
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--hilton-blue), var(--primary-gold));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
     font-size: 2rem;
     color: var(--white);
+    z-index: 2;
 }
 
 .feature-card h3 {
+    padding: 1.5rem 2rem 0.5rem;
     font-family: var(--font-primary);
     font-size: 1.5rem;
     color: var(--hilton-blue);
@@ -390,9 +413,11 @@ body {
 }
 
 .feature-card p {
+    padding: 0 2rem 2rem;
     color: var(--text-light);
     line-height: 1.6;
 }
+
 
 /* ===== ROOMS SECTION ===== */
 .rooms {
@@ -689,6 +714,28 @@ body {
 .booking {
     padding: var(--section-padding);
     background: var(--white);
+    position: relative;
+}
+
+.booking-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.booking-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+.booking .container {
+    position: relative;
+    z-index: 2;
 }
 
 .booking-content {
@@ -783,6 +830,28 @@ body {
 .contact {
     padding: var(--section-padding);
     background: var(--hilton-light-blue);
+    position: relative;
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.contact-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
 }
 
 .contact-content {
