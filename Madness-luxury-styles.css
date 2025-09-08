@@ -256,7 +256,7 @@ img[loading="lazy"].loaded {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--dark-navy);
+    color: var(--white);
     z-index: 2;
     max-width: 800px;
     padding: 0 2rem;
@@ -267,13 +267,14 @@ img[loading="lazy"].loaded {
     font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.1;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: var(--dark-navy);
+    color: var(--cream);
     font-weight: 300;
 }
 
@@ -281,7 +282,7 @@ img[loading="lazy"].loaded {
     font-size: 1.1rem;
     margin-bottom: 3.5rem;
     line-height: 1.7;
-    color: var(--dark-navy);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
@@ -1120,7 +1121,6 @@ img[loading="lazy"].loaded {
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 3.5rem;
-        color: var(--dark-navy);
     }
     
     .spa-content,
@@ -1213,17 +1213,14 @@ img[loading="lazy"].loaded {
     
     .hero-title {
         font-size: 2.8rem;
-        color: var(--dark-navy);
     }
     
     .hero-subtitle {
         font-size: 1.2rem;
-        color: var(--dark-navy);
     }
     
     .hero-description {
         font-size: 1rem;
-        color: var(--dark-navy);
     }
     
     .hero-buttons {
@@ -1264,12 +1261,10 @@ img[loading="lazy"].loaded {
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2.2rem;
-        color: var(--dark-navy);
     }
     
     .hero-subtitle {
         font-size: 1rem;
-        color: var(--dark-navy);
     }
     
     .section-title {
