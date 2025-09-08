@@ -217,11 +217,16 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.3s ease';
                 
                 img.onload = function() {
                     this.style.opacity = '1';
+                    this.classList.add('loaded');
+                };
+                
+                img.onerror = function() {
+                    this.style.opacity = '1';
+                    this.classList.add('loaded');
+                    console.log('Image failed to load:', this.src);
                 };
                 
                 imageObserver.unobserve(img);
@@ -231,6 +236,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     images.forEach(img => {
         imageObserver.observe(img);
+    });
+
+    // ===== FORCE IMAGE LOADING =====
+    const allImages = document.querySelectorAll('img');
+    allImages.forEach(img => {
+        img.onload = function() {
+            this.style.opacity = '1';
+            this.classList.add('loaded');
+        };
+        
+        img.onerror = function() {
+            this.style.opacity = '1';
+            this.classList.add('loaded');
+            console.log('Image failed to load:', this.src);
+        };
     });
 
     // ===== TOUCH GESTURES FOR MOBILE =====
