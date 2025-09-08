@@ -18,32 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile menu toggle
     mobileToggle.addEventListener('click', function() {
-        mobileToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
-        
-        // Prevent body scroll when menu is open
-        if (navMenu.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+        mobileToggle.classList.toggle('active');
     });
 
     // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            mobileToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            mobileToggle.classList.remove('active');
         });
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-            mobileToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            mobileToggle.classList.remove('active');
         }
     });
 
@@ -312,9 +303,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Swipe up to close mobile menu
         if (diff > swipeThreshold && navMenu.classList.contains('active')) {
-            mobileToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            mobileToggle.classList.remove('active');
         }
     }
 
@@ -322,9 +312,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         // Close mobile menu with Escape key
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            mobileToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            mobileToggle.classList.remove('active');
         }
     });
 
