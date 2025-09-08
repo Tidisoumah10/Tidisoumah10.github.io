@@ -256,7 +256,7 @@ img[loading="lazy"].loaded {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--white);
+    color: var(--dark-navy);
     z-index: 2;
     max-width: 800px;
     padding: 0 2rem;
@@ -267,14 +267,13 @@ img[loading="lazy"].loaded {
     font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.1;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: var(--cream);
+    color: var(--dark-navy);
     font-weight: 300;
 }
 
@@ -282,7 +281,7 @@ img[loading="lazy"].loaded {
     font-size: 1.1rem;
     margin-bottom: 3.5rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--dark-navy);
 }
 
 .hero-buttons {
