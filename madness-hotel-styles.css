@@ -346,6 +346,28 @@ body {
 .features {
     padding: var(--section-padding);
     background: var(--hilton-light-blue);
+    position: relative;
+}
+
+.features-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.features-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+.features .container {
+    position: relative;
+    z-index: 2;
 }
 
 .features-grid {
@@ -423,6 +445,28 @@ body {
 .rooms {
     padding: var(--section-padding);
     background: var(--white);
+    position: relative;
+}
+
+.rooms-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.rooms-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05;
+}
+
+.rooms .container {
+    position: relative;
+    z-index: 2;
 }
 
 .rooms-grid {
@@ -523,6 +567,28 @@ body {
 .dining {
     padding: var(--section-padding);
     background: var(--hilton-light-blue);
+    position: relative;
+}
+
+.dining-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.dining-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+.dining .container {
+    position: relative;
+    z-index: 2;
 }
 
 .dining-grid {
@@ -656,6 +722,28 @@ body {
 .events {
     padding: var(--section-padding);
     background: var(--hilton-light-blue);
+    position: relative;
+}
+
+.events-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.events-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+.events .container {
+    position: relative;
+    z-index: 2;
 }
 
 .events-grid {
