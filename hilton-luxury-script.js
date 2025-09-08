@@ -1,4 +1,4 @@
-// Hilton Luxury Hotel JavaScript
+// Madness Luxury Hotel JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // ===== NAVIGATION =====
@@ -352,5 +352,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('Hilton Luxury Hotel website loaded successfully!');
+    console.log('Madness Luxury Hotel website loaded successfully!');
 });
